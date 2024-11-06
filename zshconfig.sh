@@ -10,5 +10,5 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 # echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 cp CascadiaCode /usr/share/fonts/truetype -r
 cp MesloLG /usr/share/fonts/truetype -r
-fc-cache -vf /usr/share/fonts/
 cp -rT zsh ~
+fc-cache -vf /usr/share/fonts/

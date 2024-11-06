@@ -1,8 +1,8 @@
 #!/bin/bash
 apt update
-apt install zsh -y
+apt install -y zsh
 chsh -s $(which zsh)
-apt install zsh-syntax-highlighting -y
+apt install -y zsh-syntax-highlighting
 echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc

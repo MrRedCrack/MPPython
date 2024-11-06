@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo -i
 apt update
 apt install -y zsh
 chsh -s $(which zsh)

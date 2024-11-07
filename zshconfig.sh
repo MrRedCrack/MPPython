@@ -15,5 +15,6 @@ cp -rT zsh/. $H
 fc-cache -vf /usr/share/fonts/
 if [[ $(awk -F: -v user="pi" '$1 == user {print $NF}' /etc/passwd) != $(which zsh) ]]
 then
+    echo 'changing default shell...'
     chsh -s $(which zsh) pi
 fi

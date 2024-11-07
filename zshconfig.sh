@@ -13,7 +13,7 @@ cp CascadiaCode /usr/share/fonts/truetype -r
 cp MesloLG /usr/share/fonts/truetype -r
 cp -rT zsh/. $H
 fc-cache -vf /usr/share/fonts/
-if [[ $(sudo -u pi which $SHELL) != $(which zsh) ]]
+if [[ $(awk -F: -v user="pi" '$1 == user {print $NF}' /etc/passwd) != $(which zsh) ]]
 then
     chsh -s $(which zsh) pi
 fi

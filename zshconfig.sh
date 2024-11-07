@@ -13,7 +13,7 @@ cp CascadiaCode /usr/share/fonts/truetype -r
 cp MesloLG /usr/share/fonts/truetype -r
 cp -rT zsh/. $H
 fc-cache -vf /usr/share/fonts/
-if [[ $SHELL != $(which zsh) ]]
+if [[ $(sudo -u pi $SHELL) != $(which zsh) ]]
 then
     chsh -s $(which zsh) pi
 fi

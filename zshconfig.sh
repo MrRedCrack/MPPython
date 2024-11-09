@@ -5,13 +5,13 @@ apt install -y zsh
 # sudo -u pi chsh -s $(which zsh)
 apt install -y zsh-syntax-highlighting
 # echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
-git clone https://github.com/zsh-users/zsh-autosuggestions $H/.zsh/zsh-autosuggestions
+sudo -u pi git clone https://github.com/zsh-users/zsh-autosuggestions $H/.zsh/zsh-autosuggestions
 # echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $H/powerlevel10k
+sudo -u pi git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $H/powerlevel10k
 # echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 cp CascadiaCode /usr/share/fonts/truetype -r
 cp MesloLG /usr/share/fonts/truetype -r
-cp -rT zsh/. $H
+sudo -u pi cp -rT zsh/. $H
 fc-cache -vf /usr/share/fonts/
 if [[ $(awk -F: -v user="pi" '$1 == user {print $NF}' /etc/passwd) != $(which zsh) ]]
 then
